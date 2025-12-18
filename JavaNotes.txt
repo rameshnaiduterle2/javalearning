@@ -1,0 +1,435 @@
+Java and Introduction
+Java Architecure
+Class, method, datatypes (Primitive and non premitves).
+ 
+
+ Datatypes : 	
+	1. Premitive datatypes
+		char single character -- Character (class)
+		String (Class)(charsequence) -- String (class)
+		int  -- Intger
+		long -- Long
+		float -- Float
+		double - Double
+		boolean - Boolean
+		-- Date -- Date
+		
+		
+2.) Boxing and unboxing. (Type cast)
+
+12-11
+
+Class
+Object
+Constructors
+
+
+Class : 
+
+	Blueprint of Object. 
+	
+	class Car {
+		
+		String modelName;
+		steering
+		// fields
+		
+		
+		
+		//Operations (methods)
+	
+	
+	}	
+
+Syntax: 
+
+	public class <ClassName> {
+	
+		// fields
+		
+		//methods
+	
+	}
+	
+Name : 
+		class Every class name should start with Capital letter and First letter of each word should be capital
+		methods driveVehicle()
+		fields driveVehicle
+		statc variables TABLE_DATA
+		
+Object: 
+			<ClassName> <userDefinedName> = new <ClassName>();
+			
+			Car c = new Car();
+			
+Constructors : 
+	 
+	Defined Constructor and 
+		1.) Arg Constructor
+		2.) No Arg Constructor
+	Default Constructor	
+	
+	ClassName() {
+		
+	}
+	
+	int a = 10;
+
+String name = "Ramesh";
+=================================
+
+OOPS : 
+
+Principles : 
+		
+		1.) Encapsualation
+				AccessModifiers: 
+					1.) public 
+						private
+						protected
+						default
+			
+		2.) Inheritance
+				extends 
+				this
+				super
+					Single Level Inheritance
+					Multilevel level inheritance
+					Hierarchical Inheritance
+				
+		3.) Polymorphism 
+		4.) Abstraction 
+		5.) String 
+		6.) Immutable classes
+		6.) StringBuffer
+		7.) StringBuilder
+		8.) Synchronization
+		9.) Error Handling 
+				throws keyword
+				Try catch finally
+				Try with resources
+				
+		10.) Garbage Collection		
+		10.) Collections
+				Collection Hierachy
+				All collections 
+		11.) Multi Threading 
+				Synchronization
+				Asynchronization
+		12.) Files. 
+		12.) Serialization and Deserialization. 
+		13.) Java 8 features
+		13.) JDBC
+		
+		
+	Spring: 
+		Spring Core : 
+			ApplicationContext
+			Inversion of Control (IoC)
+			DI
+			Beans 
+			Bean Lifecycle
+			POJO
+			AOP
+			Annotations
+			Autowiring 
+			
+	Spring MVC
+		xml 
+		java 
+		REST 
+		MVC Architecure
+	Spring JPA.
+	Spring Boot. 
+	
+		
+			
+		
+		
+		
+		
+		connectionURL : localhost:3306@user:pass
+		
+		
+		types Variable
+		
+		
+		
+	public void setName(String name) {
+        this.name = name;
+    }
+
+
+user.setName(name:"Venkat")		
+
+Child object 
+	Parent 
+	
+	new Employee();
+	
+	Employee employee = new Employee();
+	employee combination 
+	
+	User (Parent) ==> 
+		Employee (Child)  -- Single Level
+			Student (Child)
+				XYZ
+				  ABC
+				  
+				  
+	A {}
+
+		B extends A {} 
+			C extends B {}
+				D extends C{}
+				
+Static methods. 
+				
+			B extends A {} 
+			C extends A
+			
+			
+Polymorphism
+
+	User {	
+	
+	registration() {
+		//action
+	}
+	
+		registration(String name) {
+			User user = new User();
+			user.setName(name);
+			
+		}
+		
+		registration(String name, long mobileNumber) {
+				// code 
+				
+		}
+	
+	}
+			
+
+Test {
+
+	registration() {
+			
+	}
+}		
+
+
+
+
+Object class. 
+	user1.equals(user2);
+	
+	user1.age = user2.age
+	
+	A - Parent 
+	
+	B - Child extend A
+	
+	C Child Extends A
+	
+	D extends C, D 
+	
+	
+	abstract 
+	
+	interface 
+		abstract methods
+		=====================================
+		
+		Execute {
+		
+		getEmployees(){
+		
+		}
+		
+		 method extract(){
+			
+		 }
+			
+			validateEducationalCerts() {
+				//getEmployees
+				10 lines
+				
+				//Extract EducationalCertificates from employees
+				process. 
+			}
+			
+			synchronized validateUtilCerts() {
+				//getAllEmployees
+				//Extract Certificates from employees
+				process. 
+			}
+			
+			validateworkExperience() {
+				//getAllEmployees
+				//Extract WorkExp from employees
+				//process
+			}
+		
+		}
+		
+		===================================
+		
+		
+		abstract Execute {
+		
+		getEmployees(){
+				//getEmployees
+				10 lines
+				
+				
+				process. 
+		}
+		
+		 
+			
+			abstract validate() ;
+			
+			
+		
+		}
+		
+		
+		class ValidateEdicationCerts Extends Execute {
+			validate() {
+				getAllEmployees();
+				extract
+				process
+			}
+		}
+		
+		class ValidateWorkCerts Extends Execute{
+			validate() {
+				getAllEmployees();
+				extract
+				process
+			}
+		}
+		
+		class ValidateCerts Extends Execute{
+			validate() {
+				getAllEmployees();
+				extract
+				process
+			}
+		}
+		
+		
+		String -- text
+		String name = "Venkat"; literals
+		String name1 = new String("Venkat"); // new key word. 
+		
+		name == name1 = false.
+			name1.equals(name) = true. 
+			
+		
+			Immutability 
+			
+			Hello World,|| Welcome to Java
+			
+		----------------------------------------
+
+			String 
+				to store datata	
+				immutable
+				internally uses heap and SCP
+				
+			    C - Create - no issues 
+				R - Read- no issues
+				U - Update - No operation -- StringBuilder
+				D - delete - No issues
+				
+				
+				List<String> 
+						name1 + name2 + name3
+						
+						
+===============================
+1.) Error 
+2.) Exceptions
+Types Of Exceptions: 
+	1.) Checked Exceptions (Compile time exceptions)
+		It identifies at Compile time 
+			read file -- > 
+			FileNotFoundException 
+			IOException
+			SQLException
+			ClassNotFoundException
+		
+	2.) Unchecked Exceptions  (run time exceptions)
+		
+		a/b = Arthematic Exceptions
+		User user = employeeService.getUser();
+		user.setName() - NullpointerExceptions
+		
+Object
+		Throwable (Class)
+		  Exception (class)
+				RuntimeExceptions (class extends exceptions)
+					-- Unchecked exceptions
+				Checked Exceptions like SQLExceptiosn, IOexceptions
+				Errors
+	
+	Throwable 			
+				
+		Exception extends Throwable 
+		
+			RunTimeException extends Exception 			
+			
+				NullPOinterException extends RunTimeException
+						
+		
+				SQLExceptiosn extends Exception			
+
+
+		
+			
+		
+	
+						
+				
+				
+			
+			
+			
+		
+		
+	
+	
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+		
+	 
+	
+	
+			
+			
+			
+			
+			
+			
+		
+		
+
+
+
+
+	
+		
+		

@@ -7,12 +7,53 @@ import java.util.*;
 public class TestLinkedList {
 
     public static void main(String[] args) {
+       hashMap();
+    }
 
+    private static void hashMap() {
+
+
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1, "Venkat");
+        map.put(2, "Rajesh");
+        map.put(3, "Rajesh");
+        map.put(4, "abc");
+
+
+        // iteration:
+            // we have to convert to set. (entrySet or keySet)
+            // then this set has to iterated.
+
+        //using keyset:
+            //keySet holds all keys in a map gives as Set
+
+        Set<Integer> keySet =   map.keySet();
+        for (Integer key: keySet) {
+                String value = map.get(key);
+                System.out.println(value);
+        }
+
+        //EntrySet:
+            //Entry means combination of key and value. each key and value coverting into a set called Entry set.
+
+        System.out.println("Using EntrySet");
+        Set<Map.Entry<Integer, String>> entrySet =  map.entrySet();
+        for (Map.Entry<Integer, String> entry :entrySet) {
+            System.out.println("key: " + entry.getKey() + " Value :" + entry.getValue());
+
+        }
+
+
+    }
+
+
+    public static void day2(){
         Employee employee = new Employee();
         employee.setId(10);
         employee.setName("Rajesj");
         employee.setAge(30);
         employee.setSalary(50000);
+
 
         Employee emp1 = new Employee();
         emp1.setId(5);
@@ -32,26 +73,21 @@ public class TestLinkedList {
         emp3.setAge(35);
         emp3.setSalary(70000);
 
-//        Set<Employee> set = new HashSet<>();
-//        set.add(employee);
-//        set.add(emp1);
-//        set.add(emp2);
-//        set.add(emp3);
-//        Set<Employee> sortedSet = new TreeSet(set);
-
         List<Employee> employees = new ArrayList<>();
         employees.add(employee);
         employees.add(emp1);
         employees.add(emp2);
         employees.add(emp3);
-        Collections.sort(employees);
+        Collections.sort(employees, new EmployeeComparator());
+
+        System.out.println(employees.size());
+//        employee.compareTo(emp1);
 
         for (Employee e : employees) {
             System.out.println(e.toString());
         }
 
     }
-
 
 
     public void test() {
@@ -85,6 +121,8 @@ public class TestLinkedList {
         }
 
         System.out.println("TreeSet :" );
+
+
         Set<Integer> set = new TreeSet<>();
         set.add(50);
         set.add(10);

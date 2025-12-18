@@ -1,14 +1,25 @@
 package com.java;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public  class Employee implements Comparable {
+public  class Employee{
 
     private long id;
     private  String name; //immutable
     private  int age;
 
     private  long salary;
+
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public String getName() {
         return name;
@@ -44,6 +55,7 @@ public  class Employee implements Comparable {
 
 
 
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -63,21 +75,20 @@ public  class Employee implements Comparable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
-                ", salary=" + salary +
                 '}';
     }
 
-    @Override
-    public int compareTo(Object o) {
-        Employee employee = (Employee) o;
-//        if(this.id > employee.id) {
-//            return -1;
-//        }else if(this.id == employee.id) {
-//            return 0;
-//        }else {
-//            return 1;
-//        }
-
-        return this.name.compareTo(employee.name);
-    }
+//    @Override
+//    public int compareTo(Object o) {
+//        Employee employee = (Employee) o;
+//            if(this.id > employee.id) {
+//                return 1;
+//            }else if(this.id == employee.id) {
+//                return 0;
+//            }else {
+//                return -1;
+//            }
+//
+////        return this.name.compareTo(employee.name);
+//    }
 }
