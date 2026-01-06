@@ -4,31 +4,75 @@ import com.java.Employee;
 
 import java.util.*;
 
-public class TestLinkedList {
+public class CollectionTestMain {
 
     public static void main(String[] args) {
-       hashMap();
+        treeMap();
+    }
+
+    private static void treeMap() {
+        System.out.println(Thread.currentThread().getName());
+        Map<Integer, String> treeMap = new TreeMap<>(); // Ascending order
+                //new TreeMap<>(Comparator.reverseOrder()); -- Descending order.
+        treeMap.put(10, "A");
+        treeMap.put(1, "B");;
+        treeMap.put(6, "D");
+        treeMap.put(3, "X");
+        System.out.println(treeMap);
+
+        Set<Integer> keys = treeMap.keySet();
+        for (Integer key:keys ) {
+            System.out.println(treeMap.get(key));
+        }
+
+    }
+
+    private static void linkedHashMap() {
+        Map<Employee, Integer> map = new HashMap<>();
+        Employee e1 = new Employee();
+        e1.setName("rajesh");
+        e1.setId(1);
+        e1.setSalary(10000);
+
+        Employee e2 = new Employee();
+        e2.setName("rajesh");
+        e2.setId(1);
+        e2.setSalary(10000);
+        map.put( e1, 1);
+        map.put( e2,2);
+        map.put( null,null);
+        System.out.println(map.size());
+
+        Set<Employee> keySet =   map.keySet();
+        System.out.println("KeySet" + keySet);
+        for (Employee key: keySet) {
+            Integer value = map.get(key);
+            System.out.println(value);
+        }
+
     }
 
     private static void hashMap() {
 
 
-        Map<Integer, String> map = new HashMap<>();
-        map.put(1, "Venkat");
-        map.put(2, "Rajesh");
-        map.put(3, "Rajesh");
-        map.put(4, "abc");
+        Map<String, String> map = new HashMap<>();
+        map.put("1", "Venkat");
+        map.put("2", "Rajesh");
+        map.put("3", "Rajesh");
+        map.put("4", "abc");
 
+//        String value =    map.get("1");
 
         // iteration:
             // we have to convert to set. (entrySet or keySet)
             // then this set has to iterated.
 
         //using keyset:
-            //keySet holds all keys in a map gives as Set
+        //keySet holds all keys in a map gives as Set
 
-        Set<Integer> keySet =   map.keySet();
-        for (Integer key: keySet) {
+        Set<String> keySet =   map.keySet();
+        System.out.println("KeySet" + keySet);
+        for (String key: keySet) {
                 String value = map.get(key);
                 System.out.println(value);
         }
@@ -37,12 +81,11 @@ public class TestLinkedList {
             //Entry means combination of key and value. each key and value coverting into a set called Entry set.
 
         System.out.println("Using EntrySet");
-        Set<Map.Entry<Integer, String>> entrySet =  map.entrySet();
-        for (Map.Entry<Integer, String> entry :entrySet) {
+        Set<Map.Entry<String, String>> entrySet =  map.entrySet();
+        for (Map.Entry<String, String> entry :entrySet) {
             System.out.println("key: " + entry.getKey() + " Value :" + entry.getValue());
 
         }
-
 
     }
 

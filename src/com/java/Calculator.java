@@ -1,10 +1,17 @@
 package com.java;
 
-public class Calculator {
+@FunctionalInterface
+public interface Calculator {
 
+     int calculate(int a, int b) ;
 
-    public int devide(int a, int b) {
-        return a/b;
-    }
+     public  static void say() {
+          System.out.println("it is a static method");
+     }
+
+     default void defaultMethod() {
+          System.out.println("it is a default method");
+     }
 
 }
+

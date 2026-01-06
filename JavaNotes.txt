@@ -384,7 +384,127 @@ Object
 				NullPOinterException extends RunTimeException
 						
 		
-				SQLExceptiosn extends Exception			
+				SQLExceptiosn extends Exception
+
+
+TreeMap:
+Key and value:
+    10, rajesh
+    7 , ajay,
+     6, banu
+     2, chandra
+
+     sort by value
+     map int , String --
+        map <String, Integer>
+
+
+        2, Chandra
+        6, banu
+        7, ajay
+        10, rajesh
+
+    RB T -- Red balck Treee
+    No null keys. if null added NPE.
+    null values are okay.
+    Threa safe.
+
+    Comparisions
+
+    HashMap
+Order:    No Order
+DS:    HashTable
+        Best map O(1)
+        Allows one Null key and nultiple null values.
+        not Thread safe. (not synchronzed)
+
+
+    LinkedHashMap
+        Insertion order
+        HashTable + Doubly linkedList
+        slower than hashMap.
+         Allows one Null key and nultiple null values.
+        not Thread safe. (not synchronzed)
+
+
+    TreeMap.
+    Sorted in nature (ascending)
+    No null keys
+    RBT (reb black Tree data structure)
+    Thread safe
+========================================================
+
+Multithreading:
+
+    Mutliple tasks executes at the same time -- Multithreading.
+
+    10+20
+    20+20
+
+    a+b
+terminologies :
+    Synchronized. Thread safe
+    not synchronized : thread friendly
+
+    program/code -- set of code (task).
+    thread, run
+    process -- execution of task.
+
+implementation :
+    1.) Thread Class
+    2.) Runnable interface.
+
+
+Thread life cycle:
+    New -= Creating a thread
+    Start -- Ready run  - start()
+    running -- calls run method/ executing a thread -- run()
+    Block/waiting -- utilitiess of threaad sleep(), join(), notify()
+    terminated. -- Completed execution.
+
+
+                    Java 8 Features.
+
+   1.) Java8 allows functional problem languages in java.
+
+1.Lambda Expressions:
+
+    Using Lambda expressions we can implement a method without creating boiler plate code.
+    We can implenet lambda expression using right arrow symbol (->)
+    Example
+        Runnable r = () -> SOUT("Hello");
+
+        ()-> defines method started and single line.
+        if it is multiple lines
+        () -> {
+            sout("helo")
+            sout("Welcome");
+        }
+
+       Advantages ::
+       boilerplate code
+       easy to understand andn sclable
+
+
+2.) static methods in interface.
+
+    From java 8 we can write static methods in Interface also earlier all must be abstract and public and no concrete methods.
+
+
+3.) Default method
+
+    List (add, size(), get)
+
+        ArrayList  , LinkedList
+
+
+
+
+
+
+
+
+
 
 
 		
