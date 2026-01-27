@@ -13,6 +13,8 @@ public  class Employee{
 
     private String password;
 
+    private String status;
+
     public String getPassword() {
         return password;
     }
@@ -54,7 +56,13 @@ public  class Employee{
     }
 
 
+    public String getStatus() {
+        return status;
+    }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
 
     @Override
     public boolean equals(Object o) {

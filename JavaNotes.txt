@@ -483,7 +483,9 @@ Thread life cycle:
 
        Advantages ::
        boilerplate code
-       easy to understand andn sclable
+       easy to understand and sclable
+
+OLD : Interface (only abstract methods)
 
 
 2.) static methods in interface.
@@ -496,6 +498,55 @@ Thread life cycle:
     List (add, size(), get)
 
         ArrayList  , LinkedList
+
+ FunctionalInteface :
+
+ interface with only single abstract method it iss called FunctionalInterface.
+
+ interface   X {
+
+    method1()
+
+ }
+        Existing Functional Interface:
+
+        1.) Runnable
+        2.) Predicate It is used to check conditional implementation
+            boolean predicate(body) {
+                return body == human
+            }
+
+        3.) Function
+        4.) Consumer
+        5.) Supplier
+
+
+4.) Optional cclass
+
+    employee
+
+5.) Streams API.
+
+1.) To start a stream we need .
+     Source (List, set, array)
+
+2. to process we need
+    Intermediate methods
+    filter
+    map
+    sorted
+    flatmap
+3.) To complete we need
+ terminal methods
+
+ collect
+ forEach
+ count
+ reduce
+ findAny or findFirst
+
+
+
 
 
 
